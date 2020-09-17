@@ -1,11 +1,9 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 微軟正黑體;
   color: #252525;
 }
 
@@ -20,19 +18,37 @@
   color: #53b9d8;
 }
 
+.link a {
+  text-decoration: none;
+  margin: 30px 30px;
+}
+
+.link a:hover {
+  color: #53b9d8;
+}
+
 #navigation {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  padding: 20px 0;
-  -webkit-box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
+  padding: 30px 100px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+}
+
+#navigation .community {
+  text-align: right;
 }
 
 #navigation .community img {
-  width: 32px;
-  height: 32px;
+  margin: 10px 25px;
   -webkit-filter: invert(26%) sepia(82%) saturate(5705%) hue-rotate(135deg) brightness(97%) contrast(84%);
           filter: invert(26%) sepia(82%) saturate(5705%) hue-rotate(135deg) brightness(97%) contrast(84%);
   -webkit-transition: 0.5s;
@@ -42,5 +58,44 @@
 #navigation .community img:hover {
   -webkit-filter: invert(50%) sepia(20%) saturate(2000%) hue-rotate(187deg) brightness(92%) contrast(116%);
           filter: invert(50%) sepia(20%) saturate(2000%) hue-rotate(187deg) brightness(92%) contrast(116%);
+}
+
+.banner {
+  background: #777777;
+  height: 100vh;
+  width: 100%;
+}
+
+#KTY {
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  letter-spacing: 30px;
+  padding-left: 30px;
+  font-size: 200px;
+  margin-top: 100px;
+}
+
+h1 p {
+  margin-bottom: 100px;
+  padding: 50px;
+}
+
+h1 .about-button {
+  padding: 10px 60px;
+  border: 2px solid #252525;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+h1 .about-button:hover {
+  background: #252525;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
