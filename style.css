@@ -1,7 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap");
-h1 {
-  font-family: 'Baloo Tammudu 2';
-  color: #68c1eb;
-  text-align: center;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 微軟正黑體;
+  color: #252525;
+}
+
+.logo {
+  font-family: 'Rubik', sans-serif;
+  font-size: 35px;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.logo:hover {
+  color: #53b9d8;
+}
+
+#navigation {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 0;
+  -webkit-box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+#navigation .community img {
+  width: 32px;
+  height: 32px;
+  -webkit-filter: invert(26%) sepia(82%) saturate(5705%) hue-rotate(135deg) brightness(97%) contrast(84%);
+          filter: invert(26%) sepia(82%) saturate(5705%) hue-rotate(135deg) brightness(97%) contrast(84%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#navigation .community img:hover {
+  -webkit-filter: invert(50%) sepia(20%) saturate(2000%) hue-rotate(187deg) brightness(92%) contrast(116%);
+          filter: invert(50%) sepia(20%) saturate(2000%) hue-rotate(187deg) brightness(92%) contrast(116%);
 }
 /*# sourceMappingURL=style.css.map */
