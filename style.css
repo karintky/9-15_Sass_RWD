@@ -82,7 +82,7 @@ h1 {
 
 p {
   padding: 30px;
-  margin-bottom: 300px;
+  margin-bottom: 50px;
 }
 
 .about-button {
@@ -98,8 +98,17 @@ p {
   color: white;
 }
 
-#work {
+#artwork {
   height: 100vh;
-  color: #f2f2f2;
+  background: #f2f2f2;
+}
+
+#artwork #artworkbox {
+  width: 1200px;
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 /*# sourceMappingURL=style.css.map */

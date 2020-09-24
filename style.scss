@@ -79,7 +79,7 @@ h1{
 
 p{  
     padding: 30px;
-    margin-bottom: 300px;
+    margin-bottom: 50px;
 }
 
 .about-button {
@@ -94,14 +94,26 @@ p{
     }
 }
 
-#artworkbox{
+#artwork {
     height: 100vh;
-    color: $color-bg-work;
+    background: $color-bg-work;
 
-    .work{
-    width:1200px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 auto;
+    #artworkbox {
+        width: 1200px;
+        display: grid;
+        margin: 0 auto;
+        // repeat(數量，一格的寬度)
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px 25px;
+
+        .work{
+
+            img{
+                display: block;
+                width: 100%;
+                height: 300px;
+                background: #000;
+            }
+        }
     }
 }
