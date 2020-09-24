@@ -67,7 +67,6 @@
 }
 
 #KTY {
-  background: #fff;
   width: 100%;
   height: 100vh;
   font-family: 'Rubik', sans-serif;
@@ -78,15 +77,15 @@ h1 {
   letter-spacing: 30px;
   padding-left: 30px;
   font-size: 200px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
-h1 p {
-  margin-bottom: 100px;
-  padding: 50px;
+p {
+  padding: 30px;
+  margin-bottom: 300px;
 }
 
-h1 .about-button {
+.about-button {
   padding: 10px 60px;
   border: 2px solid #252525;
   text-decoration: none;
@@ -94,8 +93,13 @@ h1 .about-button {
   transition: 0.3s;
 }
 
-h1 .about-button:hover {
+.about-button:hover {
   background: #252525;
   color: white;
+}
+
+#work {
+  height: 100vh;
+  color: #f2f2f2;
 }
 /*# sourceMappingURL=style.css.map */
