@@ -2,7 +2,7 @@
 
 $color-main: #252525;
 $color-sub: rgb(83, 185, 216);
-$color-bg-work : #f2f2f2;
+$color-white: #f2f2f2;
 
 *{
     padding: 0;
@@ -65,7 +65,7 @@ padding: 20px;
 // About Me
 #KTY{   
     width: 100%;
-    height: 100vh;
+    height: 700px;
     font-family: 'Rubik', sans-serif;
     text-align: center;
 }
@@ -75,6 +75,7 @@ h1{
     padding-left: 30px;
     font-size: 200px;
     margin-top: 50px;
+    padding-top: 100px;
 }
 
 p{  
@@ -96,7 +97,7 @@ p{
 
 #artwork {
     height: 100vh;
-    background: $color-bg-work;
+    background: $color-white;
 
     #artworkbox {
         width: 1200px;
@@ -166,7 +167,6 @@ footer {
 
 .logo-small {
     color: $color-white;
-    font-family: $font-family-main;
     letter-spacing: 3px;
     padding-left: 3px;
     font-size: 16px;

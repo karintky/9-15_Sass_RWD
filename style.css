@@ -68,7 +68,7 @@
 
 #KTY {
   width: 100%;
-  height: 100vh;
+  height: 700px;
   font-family: 'Rubik', sans-serif;
   text-align: center;
 }
@@ -78,6 +78,7 @@ h1 {
   padding-left: 30px;
   font-size: 200px;
   margin-top: 50px;
+  padding-top: 100px;
 }
 
 p {
@@ -122,8 +123,8 @@ p {
 
 #artwork #artworkbox .work h5 {
   text-align: center;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 #artwork #artworkbox .work span {
@@ -134,5 +135,42 @@ p {
   margin-top: 12px;
   margin-left: 10px;
   font-size: 12px;
+}
+
+footer {
+  background: #252525;
+  padding: 90px 0;
+  text-align: center;
+}
+
+footer .logo {
+  color: #f2f2f2;
+}
+
+footer .link a {
+  color: #f2f2f2;
+}
+
+footer .community {
+  text-align: center;
+}
+
+footer .community img {
+  -webkit-filter: invert(86%) sepia(0%) saturate(0%) hue-rotate(73deg) brightness(98%) contrast(91%);
+          filter: invert(86%) sepia(0%) saturate(0%) hue-rotate(73deg) brightness(98%) contrast(91%);
+  margin: 30px 20px;
+}
+
+footer #copyright {
+  color: #f2f2f2;
+  font-size: 8px;
+  margin-top: 50px;
+}
+
+.logo-small {
+  color: #f2f2f2;
+  letter-spacing: 3px;
+  padding-left: 3px;
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */
