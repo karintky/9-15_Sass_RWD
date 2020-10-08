@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS_RWD</title>
+
+    <!-- AOS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body id="top">
+    <nav id="navigation">
+        <div>
+            <a href="../index.html" class="logo">-KARIN-</a>
+        </div>
+        <img src="../img/menu.png" alt="選單" id="menu">
+        <div class="link">
+            <a href="../about/">About Me</a>
+            <a href="../work/">Portfolio</a>
+            <a href="../contact/">Contact Me</a>
+        </div>
+        <div class="community">
+            <a href=""><img src="../img/facebook-b.png" alt="facebook"></a>
+            <a href=""><img src="../img/insta-b.png" alt="instagram"></a>
+            <a href=""><img src="../img/twitter-b.png" alt="twitter"></a>
+        </div>
+    </nav>
+
+
+    <footer>
+        <div>
+            <a href="./index.html" class="logo">-KARIN-</a>
+        </div>
+        <div class="community">
+            <a href=""><img src="../img/facebook-b.png" alt="facebook"></a>
+            <a href=""><img src="../img/insta-b.png" alt="instagram"></a>
+            <a href=""><img src="../img/twitter-b.png" alt="twitter"></a>
+        </div>
+        <div class="link">
+            <a href="">About Me</a>
+            <a href="">Portfolio</a>
+            <a href="">Contact Me</a>
+        </div>
+        <div id="copyright">
+            Copyright &copy; 2016 - 2020 <span class="logo-small">-KARIN-</span> All rights reserved
+        </div>
+    </footer>
+
+    
+    <img src="../img/arrow.png" alt="回去首頁" id="arrow" data-gte-target="top" data-gte-offset="0">
+    
+
+    <!-- AOS CDN , its place before "BODY" -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+<!-- 前往指定的區塊元素 -->
+<script src="https://kid421.github.io/Web_JavaScript_GoToElement/goToElement.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $("#banner").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        dotsClass: "slick-dots dots"})
+</script>
+
+
+</body>
+
+</html>

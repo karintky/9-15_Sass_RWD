@@ -9,17 +9,21 @@
     <!-- AOS CDN -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 
-<body>
+<body id="top">
     <nav id="navigation">
         <div>
             <a href="./index.html" class="logo">-KARIN-</a>
         </div>
+        <img src="./img/menu.png" alt="選單" id="menu">
         <div class="link">
-            <a href="">About Me</a>
-            <a href="">Portfolio</a>
-            <a href="">Contact Me</a>
+            <a href="./about/">About Me</a>
+            <a href="./work/">Portfolio</a>
+            <a href="./contact/">Contact Me</a>
         </div>
         <div class="community">
             <a href=""><img src="./img/facebook-b.png" alt="facebook"></a>
@@ -28,12 +32,17 @@
         </div>
     </nav>
 
-    <section>
-        <div class="banner"></div>
+    <section id="banner">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=A&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=B&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=C&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=D&font=noto">
+
     </section>
 
     <section id="KTY">
-        <h1  data-aos="fade-in" data-aos-offest="300" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-mirror="true">-KARIN-</h1>
+        <h1 data-aos="fade-in" data-aos-offest="300" data-aos-duration="1500" data-aos-easing="ease-in-out"
+            data-aos-mirror="true">-KARIN-</h1>
         <p>I'm a Visual Designer.</p>
         <a href="" class="about-button">About Me</a>
     </section>
@@ -42,32 +51,37 @@
         <h2>My Portfolio</h2>
         <div id="artworkbox">
             <div class="work">
-                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000" >
+                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000">
                 <span>Click Me</span>
                 <h5>Title</h5>
             </div>
             <div class="work">
-                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000"  data-aos-delay="300">
+                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000"
+                    data-aos-delay="300">
                 <span>Click Me</span>
                 <h5>Title</h5>
             </div>
             <div class="work">
-                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000" data-aos-delay="400">
+                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000"
+                    data-aos-delay="400">
                 <span>Click Me</span>
                 <h5>Title</h5>
             </div>
             <div class="work">
-                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000" data-aos-delay="500">
+                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000"
+                    data-aos-delay="500">
                 <span>Click Me</span>
                 <h5>Title</h5>
             </div>
             <div class="work">
-                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000" data-aos-delay="600">
+                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000"
+                    data-aos-delay="600">
                 <span>Click Me</span>
                 <h5>Title</h5>
             </div>
             <div class="work">
-                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000" data-aos-delay="700">
+                <img src="" alt="" data-aos="zoom-in" data-aos-offest="300" data-aos-duration="1000"
+                    data-aos-delay="700">
                 <span>Click Me</span>
                 <h5>Title</h5>
             </div>
@@ -95,11 +109,30 @@
         </div>
     </footer>
 
-<!-- AOS CDN , its place before "BODY" -->
+    
+    <img src="./img/arrow.png" alt="回去首頁" id="arrow" data-gte-target="top" data-gte-offset="0">
+    
+
+    <!-- AOS CDN , its place before "BODY" -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+
+<!-- 前往指定的區塊元素 -->
+<script src="https://kid421.github.io/Web_JavaScript_GoToElement/goToElement.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $("#banner").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        dotsClass: "slick-dots dots"})
+</script>
+
+
 </body>
 
 </html>

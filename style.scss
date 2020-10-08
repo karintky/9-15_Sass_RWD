@@ -4,6 +4,10 @@ $color-main: #252525;
 $color-sub: rgb(83, 185, 216);
 $color-white: #f2f2f2;
 
+$desktop: 1025px;
+$table: 1024px;
+$mobile: 767px;
+
 *{
     padding: 0;
     margin: 0;
@@ -22,11 +26,24 @@ padding: 20px;
 }
 }
 
-.link a{  
-    text-decoration: none;
-    margin: 30px 30px;
-    &:hover{    
-        color:$color-sub;
+.link {
+    text-align: center;
+    grid-area: link;
+
+    a {
+        text-decoration: none;
+        padding: 30px 30px 30px 40px;
+        transition: 0.3s;
+        letter-spacing: 10px;
+
+        &:hover {
+            color: $color-sub;
+        }
+    }
+
+    // 平板：隱藏
+    @media screen and (max-width: $table){
+        display: none;
     }
 }
 
@@ -39,28 +56,92 @@ padding: 20px;
     position: fixed;
     width: 100%;
     background:#fff;
+    z-index: 1;
 
-    .community{ 
-        text-align: right;
+    @media screen and (min-width: $desktop) {
+        grid-template-areas: "logo community link";
+    }
 
-        img{
-            margin: 10px 25px;    
-            filter: invert(26%) sepia(82%) saturate(5705%) hue-rotate(135deg) brightness(97%) contrast(84%);
-            transition: 0.5s;
+    // 平板
+    @media screen and (max-width: $table) {
+        grid-template-areas: "logo community menu";
+    }
+    // 手機
+    @media screen and (max-width: $mobile) {
+        padding: 10px 6px;
+    }
 
-            &:hover{    
-                filter: invert(50%) sepia(20%) saturate(2000%) hue-rotate(187deg) brightness(92%) contrast(116%)
-            }
+    // 選單
+    #menu {
+        grid-area: menu;
+        
+        // 桌電：隱藏
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+        // 平板：顯示
+        @media screen and (max-width: $table) {
+            display: block;
+            margin-left: auto;
+        }
+        // 手機
+        @media screen and (max-width: $mobile) {
+            width: 32px;   
+        }
+    }
+}
+.community{ 
+    text-align: right;
+    grid-area: community;
+
+    img{
+        margin: 10px 25px;    
+        filter: invert(26%) sepia(82%) saturate(5705%) hue-rotate(135deg) brightness(97%) contrast(84%);
+        transition: 0.5s;
+
+        &:hover{    
+            filter: invert(50%) sepia(20%) saturate(2000%) hue-rotate(187deg) brightness(92%) contrast(116%)
+        }
+
+        @media screen and (max-width: $mobile) {
+            margin-left: 0;
         }
     }
 }
 
 // banner
-.banner{    
-    background: rgb(119, 119, 119);
-    height: 100vh;
+#banner {
     width: 100%;
+    height: 100vh;
+    background: #eee;
+    // 溢出：隱藏
+    overflow: hidden;
+    
+    .dots {
+        bottom: 60px;
+    }
+
+    // 平板
+    @media screen and (max-width: $table) {
+        height: 100%;
+
+        .slick-track {
+            height: 900px;
+        }
+
+        img {
+            // 物件適應：img 版本的 background-size
+            object-fit: cover;
+        }
+    }
+    // 手機
+    @media screen and (max-width: $mobile) {
+        .slick-track {
+            height: 500px;
+        }
+    }
 }
+
 
 // About Me
 #KTY{   
@@ -76,11 +157,24 @@ h1{
     font-size: 200px;
     margin-top: 50px;
     padding-top: 100px;
+
+    // 平板
+    @media screen and (max-width: $table) {
+        margin-top: 200px;
+    }
+    // 手機
+    @media screen and (max-width: $mobile) {
+        font-size: 64px;
+        letter-spacing: 10px;
+        padding-left: 10px;
+        margin-top: 100px;
+    }
 }
 
 p{  
     padding: 30px;
     margin-bottom: 50px;
+    
 }
 
 .about-button {
@@ -104,6 +198,17 @@ p{
     height: 100vh;
     background: $color-white;
 
+    // 平板
+    @media screen and (max-width: $table) {
+        height: auto;
+        padding-bottom: 100px;
+    }
+    @media screen and (max-width: $mobile) {
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+
     #artworkbox {
         width: 1200px;
         display: grid;
@@ -111,6 +216,17 @@ p{
         // repeat(數量，一格的寬度)
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px 25px;
+        // 平板
+        @media screen and (max-width: $table) {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 30px;
+        }
+        // 手機
+        @media screen and (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
 
         .work{
 
@@ -175,4 +291,15 @@ footer {
     letter-spacing: 3px;
     padding-left: 3px;
     font-size: 16px;
+}
+
+#arrow{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background: rgb(195, 195, 195);
+    border-radius: 40%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
